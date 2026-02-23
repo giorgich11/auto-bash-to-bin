@@ -12,9 +12,10 @@ The ultimate tool to **auto-compile bash scripts into binaries**. No more messin
 ## 📦 Installation & Usage
 1. **Clone the repo:**
    ```bash
-   git clone [https://github.com/giorgich11/auto-bash-to-bin.git](https://github.com/giorgich11/auto-bash-to-bin.git)
+  git clone https://github.com/giorgich11/auto-bash-to-bin.git
    cd auto-bash-to-bin
    chmod +x factory.sh
+   ./factory.sh
 
 requirements: 
 
