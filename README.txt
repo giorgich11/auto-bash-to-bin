@@ -36,3 +36,5 @@ sudo zypper install shc zenity
 
 5.Alpine Linux
 apk add shc zenity
+
+other information: COMING TO PHONES SOON STAY TUNED!!!!!!
