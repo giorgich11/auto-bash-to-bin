@@ -14,7 +14,7 @@ The ultimate tool to **auto-compile bash scripts into binaries**. No more messin
    ```bash
    git clone [https://github.com/giorgich11/auto-bash-to-bin.git](https://github.com/giorgich11/auto-bash-to-bin.git)
    cd auto-bash-to-bin
-   chmod +x auto-bash-to-bin.sh
+   chmod +x factory.sh
 
 requirements: 
 
