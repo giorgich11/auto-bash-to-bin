@@ -9,6 +9,8 @@ The ultimate tool to **auto-compile bash scripts into binaries**. No more messin
 - **Dual Output:** Generates both a `.sh` source and a protected `.bin` executable.
 - **Lightweight:** Zero bloat, just pure efficiency.
 
+tutorial video is at: https://www.youtube.com/watch?v=AM9DyUcPCj8
+
 ## 📦 Installation & Usage
 1. **Clone the repo:**
    ```bash
