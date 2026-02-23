@@ -1,11 +1,17 @@
-to use this tool its easy!
-first put factory.sh in home then do command chmod +x factory.sh then ./factory.sh then
 
-just enter the name
-then hit ok
-then enter your bash script in the textbox or paste it in
-click ok
-click compile or etc
-close it
-and use ./"your filename".bin
-replace "your filename" with your selected name of the script and remove the ""
+# 🚀 Auto-Bash-to-Bin by giorgich11
+
+The ultimate tool to **auto-compile bash scripts into binaries**. No more messing with manual `shc` commands or cleaning up leftover C files. 
+
+## 🛠 Features
+- **Interactive Flow:** Just enter the name and paste your script.
+- **Auto-Cleanup:** Automatically removes `.x.c` files.
+- **Dual Output:** Generates both a `.sh` source and a protected `.bin` executable.
+- **Lightweight:** Zero bloat, just pure efficiency.
+
+## 📦 Installation & Usage
+1. **Clone the repo:**
+   ```bash
+   git clone [https://github.com/giorgich11/auto-bash-to-bin.git](https://github.com/giorgich11/auto-bash-to-bin.git)
+   cd auto-bash-to-bin
+   chmod +x auto-bash-to-bin.sh
