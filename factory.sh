@@ -1,0 +1,39 @@
+#!/bin/bash
+# THE MASTER FACTORY: GUI -> SCRIPT -> BINARY
+
+# 1. Get the App Name
+APP_NAME=$(zenity --entry --title="FACTORY" --text="Enter App Name (e.g., ghost_bot):")
+[ -z "$APP_NAME" ] && exit
+
+# 2. Get the Actual Bash Code (Multiline Input)
+# We use --text-info with --editable to allow a massive code dump
+TEMP_CODE_FILE=$(mktemp)
+zenity --text-info --title="PASTE YOUR BASH SCRIPT" \
+       --text="#!/bin/bash\n# Paste logic here..." \
+       --editable > "$TEMP_CODE_FILE"
+
+# Check if they actually put code in
+if [ ! -s "$TEMP_CODE_FILE" ]; then
+    zenity --error --text="No code provided. Factory shutting down."
+    exit
+fi
+
+# 3. Build the .sh File
+FINAL_SH="${APP_NAME}.sh"
+mv "$TEMP_CODE_FILE" "$FINAL_SH"
+chmod +x "$FINAL_SH"
+
+# 4. Ask to Binary-ize it (.bin)
+zenity --question --title="COMPILE?" --text="Turn $FINAL_SH into a compiled .bin (using shc)?"
+
+if [ $? = 0 ]; then
+    # Compile it
+    shc -f "$FINAL_SH" -o "${APP_NAME}.bin"
+    
+    # Cleanup the side-files shc makes
+    rm "${FINAL_SH}.x.c"
+    
+    zenity --info --text="SUCCESS!\nCreated: $FINAL_SH\nCreated: ${APP_NAME}.bin (RAW BINARY)"
+else
+    zenity --info --text="SUCCESS!\nCreated: $FINAL_SH"
+fi
