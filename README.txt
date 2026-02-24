@@ -37,4 +37,4 @@ sudo zypper install shc zenity
 5.Alpine Linux
 apk add shc zenity
 
-other information: coming to MAC-Os soon.update will release when repo hits 200 views
+other information: update at 200 views
